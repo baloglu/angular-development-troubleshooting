@@ -1,2 +1,12 @@
 # angular-development-troubleshooting
 I will take notes for the issues in angular development and solutions
+
+#ng : The term 'ng' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if   
+a path was included, verify that the path is correct and try again.
+
+#issue
+I was updating angular 11 to 12 and after completion, ng command became unrecognized in windows (using windows terminal).
+
+#Solution
+There are many reason why one see such an error but in my case, angular and node installation was fine and issue was resolved with this command below.
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
