@@ -23,7 +23,7 @@ will update those outdated packages. If packages are still in outdated list, you
 
 
 # Downgrade packages
-During updating packages, I also updated the typescript to lates version which 4.3.2, but angular complained that it should be >=4.2.3 and <4.3
+During updating packages, I also updated the typescript to the latest version which is 4.3.2 at the time of writing, but angular complained that it should be >=4.2.3 and <4.3
 
 To downgrade a particular package, in this example typescript type
 ## npm i -D typescript@4.2.3
