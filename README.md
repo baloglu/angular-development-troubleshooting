@@ -27,3 +27,50 @@ During updating packages, I also updated the typescript to the latest version wh
 
 To downgrade a particular package, in this example typescript type
 ## npm i -D typescript@4.2.3
+
+
+# NPM not found
+I am working on my ubuntu workstation, pulled the last changes here, but in my ubuntu, @angular/cli version was low and I wanted to upgrade it to the same version in my windows pc which is 12.0.3. 
+
+## npm update @angular/cli@12.0.3 -g
+This is rejected by linux due to permissions 
+npm ERR! code EACCES
+npm ERR! syscall rename
+npm ERR! path /usr/lib/node_modules/csvtojson
+npm ERR! dest /usr/lib/node_modules/.csvtojson-hT6TOSPC
+npm ERR! errno -13
+npm ERR! Error: EACCES: permission denied, rename '/usr/lib/node_modules/csvtojson' -> '/usr/lib/node_modules/.csvtojson-hT6TOSPC'
+npm ERR!  [Error: EACCES: permission denied, rename '/usr/lib/node_modules/csvtojson' -> '/usr/lib/node_modules/.csvtojson-hT6TOSPC'] {
+npm ERR!   errno: -13,
+npm ERR!   code: 'EACCES',
+npm ERR!   syscall: 'rename',
+npm ERR!   path: '/usr/lib/node_modules/csvtojson',
+npm ERR!   dest: '/usr/lib/node_modules/.csvtojson-hT6TOSPC'
+npm ERR! }
+npm ERR! 
+npm ERR! The operation was rejected by your operating system.
+
+So I added sudo 
+## sudo npm update @angular/cli@12.0.3 -g
+
+now it works
+___removed 656 packages, and audited 1 package in 6s
+
+found 0 vulnerabilities
+npm notice 
+npm notice New minor version of npm available! 7.10.0 -> 7.16.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v7.16.0
+npm notice Run npm install -g npm@7.16.0 to update!
+npm notice 
+
+but the issue is when I wanted to use npm update for my repository I got 
+bash: /usr/bin/npm: No such file or directory 
+
+
+## Solution
+Maybe not the nicest solution but I decided to reinstall node. 
+## curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+## sudo apt-get install -y nodejs
+## npm --version
+
+6.14.13 all done :)
