@@ -73,4 +73,4 @@ Maybe not the nicest solution but I decided to reinstall node.
 ## sudo apt-get install -y nodejs
 ## npm --version
 
-6.14.13 all done :)
+6.14.13 all done :) Looking at the warnings, I see that I had npm version 7.10 and it was asking to update it to 7.16 but the last LTS version of node v14.17.0 is actually shipped with npm 6.14.13. Probably at some point I should remove everything about node and reinstall everything on ubuntu as there might be clashing packages.
