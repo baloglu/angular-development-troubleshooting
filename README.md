@@ -1,4 +1,4 @@
-# Angular Development Troubleshooting and Must-Know things
+<span style="color:blue"># Angular Development Troubleshooting and Must-Know things</span>
    These are my notes for the issues in angular development and solutions. [For markdown shortcuts this cheatsheet is fine](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
  
 
