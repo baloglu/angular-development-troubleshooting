@@ -1,8 +1,7 @@
-# Angular Development Troubleshooting and Must-Know things
+# Angular Development Troubleshooting and Must-Know tips
 
 ~~~
-These are my notes for the issues in angular development and solutions. 
-[For markdown shortcuts this cheatsheet is fine](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
+These are my notes for the issues in angular development and solutions.  
 ~~~
 
 ---
@@ -140,4 +139,5 @@ mat-paginator mat-sort issue
 ```
 
 
-
+###### Links
+[Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
