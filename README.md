@@ -29,7 +29,7 @@ If there are packages with outdated versions, check what is different in the new
 ```bash
 npm update
 ```
-will update those outdated packages. If packages are still in outdated list, you can manually update a single package
+will update those outdated packages. Npm respects semantic versioning (semver) [semver cheatsheet](https://devhints.io/semver). If packages are still in outdated list, you can manually update a single package
 ```bash
 npm update package/name@latest (or version number e.g. 4.2.3 instead of latest)
 ```
@@ -137,7 +137,11 @@ When I pulled and updated node and npm, some packages in repository could have g
 ```html
 mat-paginator mat-sort issue
 ```
-
+Angular Material issues can be quite tricky. I started having issues with paginator and sort functions not working without error in console. Both were initialized after data were received. After going through issues, I found that both paginator and sort are having issues if related html tags have __*ngIf*__ condition. Instead of ```<div *ngIf="condition">```, using e.g
+```html
+<div [hidden]="!condition"> table to sort and paginate </div>
+```
+clears the issues.
 
 ###### Links
 [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
